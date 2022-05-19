@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style_1.css" media="screen"/>
+        <script type="text/javascript" src="parsers.js"></script>
+        <script type="text/javascript" src="utils.js"></script>
+        <script type="text/javascript" src="prudens.js"></script>
+        <title>
+            Prudens JS
+        </title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-left">
+                <div class="header-title">
+                    <a href="index.html"><span class="header-link">Prudens JS</span></a>
+                </div>
+                <div class="header-menu">
+                    <div class="header-menu-item">
+                        <a href="docs.html"><span class="header-link">Docs</span></a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a href="contact.html"><span class="header-link">Contact</span></a>
+                    </div>
+                    <div class="header-menu-item">
+                        <a href="changelog.html"><span class="header-link">Changelog</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="execute-button" onclick="consoleOutput()">Deduce!</div> -->
+        </div>
+        <div class="body-container contact">
+            <div class="changelog">
+                <div class="changelog-body">
+                    <h1>Changelog</h1>
+                    <p>Current version: 0.8.0</p>
+                    <h3>v. 0.8.0</h3>
+                    <ul>
+                        <li>
+                            Bug fixes.
+                        </li>
+                        <li>
+                            Propositional abduction is now supported by Prudens JS.
+                        </li>
+                        <li>
+                            Extensive Documentation regarding the package available <a href="https://github.com/VMarkos/prudens-js/blob/main/README.md"><span class="text-link">here</span></a>.
+                        </li>
+                    </ul>
+                    <h3>v. 0.7.4</h3>
+                    <ul>
+                        <li>Prudens's language supports the equality predicate <span class="code">?=</span> which takes two arguments and checks whether 
+                            they are equal or not. The arguments may be either constants or variables or Javascript mathematical expressions - or any other 
+                            expressions that make sense to be compared such as, but not restricted to, strings. Also, the <span class="code">?=</span> predicate 
+                            allows for a variable to be unified with another variable/constant in case the former is not already assigned.
+                        </li>
+                        <li>Prudens's language supports an inequality predicate, namely <span class="code">?<</span> as well which compares - inheriting any
+                            underlying Javascript semantics - two expressions - be it variables, constant or, in general, valid Javascript expressions.
+                        </li>
+                    </ul>
+                    <h3>v. 0.7.3</h3>
+                    <ul>
+                        <li>Now the engine allows for propositional rules - i.e. rules whose literals may not include any argument. Note that a rule from 
+                            this version on may contain any combination of propositional and first-order literals.
+                        </li>
+                        <li>The special propositional literal <span class="code">true</span> is assumed to be part of any context. This literal is assumed to 
+                            be always true and may be used as a casual literal in any rule's body.
+                        </li>
+                        <li>The background reasoning algorithm has been slightly altered in order to speed-up computations in the case of propositional literals.</li>
+                    </ul>
+                    <h3>v. 0.7.2</h3>
+                    <ul>
+                        <li>Extended Prudens's language with a dummy variable symbol, <span class="code">_</span>, which is inteded to be used in cases when the value of the variable of
+                            a predicate is of no importance.</li>
+                        <li>Added an abduction tab on the left of Prudens JS home page. For the time being, there is no functionality available - to be added with new update.</li>
+                        <li>Added a "Download output" option over the console which, when checked, downloads the output of the console as a <span class="code">.txt</span> file.</li>
+                    </ul>
+                    <h3>v. 0.7.1</h3>
+                    <ul>
+                        <li>Fixed Bug #001 - Ctrl+A keyboard shortcut now selects all text in the corresponding code editor.</li>
+                        <li>Now apart from any inferences that may occur during deduction, the corresponding inference graph is presented in the console, below the inferences themselves.
+                            Actually, what is presented is a mapping from any non-contextual inferred literals alongside a list of rules that has led to them being inferred during the
+                            inference process.
+                        </li>
+                    </ul>
+                    <h2>v. 0.7.0</h2> 
+                    <ul>
+                        <li>All Prudens's basic functionalities are supported. For more, see <a href="docs.html"><span class="text-link">Documentation</span></a>.</li>
+                        <li>Code within both "Knowledge Base" and "Context" editors is checked for any syntax errors. However, the error messages returned in the console are
+                            still at an early stage and, hence, quite generic.
+                        </li>
+                        <li>All the relevant output - i.e. inferences, errors or warnings - are printed in the console. The only thing that is not yet printed are the corresponding
+                            explanations - they will be part of possibly the next update.</li>
+                        <li>The only way to interact with the console other than using the "Deduce!" buttpn is by pressing the "Clear" button - above the console's top right corner -
+                            which clear's anything that appears in it.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 
