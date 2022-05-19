@@ -706,16 +706,28 @@ function graphToString(graph) {
 }
 
 function dilemmasToString(dilemmas) {
+	if (dilemmas === undefined) {
+		return "";
+	}
 	let dilemmasString = "\{\n";
 	let dilemma;
 	for (let i=0; i<dilemmas.length; i++) { // TODO define subToString!
 		dilemma = dilemmas[i];
-		dilemmasString += "[" + ruleToString(dilemmas[0]) + ruleToString(dilemmas[1]) + subToString(dilemmas[2]) + "]";
-		if (i < dilemmas.length - 1) {
-			dilemmasString += "\n";
-		}
+		dilemmasString += "[" + ruleToString(dilemma[0]) + ", " + ruleToString(dilemma[1]) + ", " + subToString(dilemma[2]) + "]\n";
 	}
-	return dilemmasString;
+	return dilemmasString + "\}";
+}
+
+function subToString(sub) {
+	let variable, subString = "\{";
+	for (let i=0; i<Object.keys(sub).length; i++) {
+		variable = Object.keys(sub)[i];
+		if (variable === "undefined") {
+			continue;
+		}	
+		subString += variable + " -> " + sub[variable] + ", ";
+	}
+	return subString.substring(0, subString.length - 2) + "}";
 }
 
 function abductiveProofsToString(proofs) {

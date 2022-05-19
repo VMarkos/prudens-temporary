@@ -603,6 +603,7 @@ function forwardChaining(kbObject, context, priorityFunction=specificityPrioriti
         context: context,
         facts: facts,
         graph: graph,
+        dilemmas: dilemmas,
     }
 }
 
